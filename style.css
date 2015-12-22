@@ -1,0 +1,49 @@
+.imageDiv 
+{
+	height : 150px;
+	width :150px;
+	float:left;
+	padding: 13px;
+	overflow:hidden;
+	cursor:pointer;
+}
+
+input[type=file]
+{
+	cursor:pointer;
+	
+}
+
+#slider {
+    width: 200px;
+    height: 10px;
+    margin: 10px 0;
+    float: right;
+    cursor:pointer;
+    display:inline;
+}
+
+#adjuster {
+    cursor:pointer;
+    width: 17px;
+    height:17px;
+    hover:zoom;
+}
+
+#zoom {
+     font-size: 26px;
+     float: right;
+     color:#585858;
+     padding-right:8px;
+     padding-left:8px;
+     cursor:context-menu;
+}
+
+.imageDiv
+{
+	padding: 4px;
+	line-height: 1.42857143;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;	
+}

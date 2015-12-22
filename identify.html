@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Identify</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid" id="navigationbar">
+    <div class="navbar-header"> <a id="imageLink" class="navbar-brand" href="IBEIS.html"> <img src="008861-orange-grunge-sticker-icon-arrows-arrow2-upload.png" class="img-circle" width="50" height="50"></a> <a class="navbar-brand" href="IBEIS.html">Image Upload Tool</a> </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="IBEIS.html">About</a></li>
+        <li><a href="importImages.php">Import</a></li>
+        <li><a href="group.html">Group</a></li>
+        <li><a href="detect.html">Detect</a></li>
+        <li class="active"><a href="identify.html">Identify</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="contact.html"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="mainDiv">
+<h4 align="center"> Step 4/5 - Identifying the species detected from the uploaded sightings</h4>
+<div class="progress">
+  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+  aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    70% Completed
+  </div>
+</div>
+
+<table border="2" style="width:80%">
+  
+	<TH>ID</TH>
+	<TH>THUMB</TH>
+	<TH>SOURCE IMAGE NAME</TH>
+	<TH>NAME AS IN IBEIS DATABASE</TH>
+	<TH>SPECIES</TH>
+
+	<tr>
+    		<td>1</td>
+		<td align="center"> <img src="elephant1.jpg" align="center" border=4 height=200 width=250></td> 
+	      	<td>DSC_01.JPG</td>
+           	<td>IBEIS_213</td>
+		<td>Zebra(Grevy's)</td>
+  	</tr>
+  	<tr>
+          	<td>5</td>
+	    	<td align="center"> <img src="elephant2.jpg" align="center" border=4 height=200 width=250></td> 
+	    	<td>DSC_11.JPG</td>
+	    	<td><input type="text" name="random" onfocus="this.value=''" value="Enter New Name..."></td>
+		<td>Zebra(Grevy's)</td>
+  	</tr>
+	<tr>
+    		<td>9</td>
+    		<td align="center"> <img src="elephant3.jpg" align="center" border=4 height=200 width=250></td> 
+    		<td>DSC_15.JPG</td>
+	     	<td>IBEIS_345</td>
+		<td>Zebra(Grevy's)</td>
+  	</tr>
+	<tr>
+    		<td>9</td>
+    		<td align="center"> <img src="elephant4.jpg" align="center" border=4 height=200 width=250></td> 
+    		<td>DSC_17.JPG</td>
+	     	<td><input type="text" name="random" onfocus="this.value=''" value="Enter New Name..."></td>
+		<td>Zebra(Grevy's)</td>
+  	</tr>
+	
+</table>
+
+<div align="center">
+	<a href="save.html" class="btn btn-success btn-lg"> Save to Database <span class="glyphicon glyphicon-cloud-upload"></span></a>
+</div>
+
+<ul class="pager">
+    <li class="previous"><a href="detect.html" style="color:#F29F01"> <span class="glyphicon glyphicon-chevron-left"></span> Previous Step</a></li>
+</ul>
+</body>
+</html>

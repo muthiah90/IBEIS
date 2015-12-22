@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Detect</title>
+<script type="text/javascript" src="sessvars.js"></script>
+<script type="text/javascript">
+onload = function(){
+
+sessvars.identifyPage = "true";
+
+if(sessvars.importPage == "true")
+{
+	document.getElementById("import").removeAttribute("class");
+	document.getElementById("importLink").setAttribute("href", "importImages.php");
+}
+else
+{
+	document.getElementById("import").setAttribute("class", "disabled");
+	document.getElementById("importLink").removeAttribute("href");
+}
+
+if(sessvars.groupPage == "true")
+{
+	document.getElementById("group").removeAttribute("class");
+	document.getElementById("groupLink").setAttribute("href", "group.php");
+}
+else
+{
+	document.getElementById("group").setAttribute("class", "disabled");
+	document.getElementById("groupLink").removeAttribute("href");
+}
+
+if(sessvars.detectPage == "true")
+{
+	document.getElementById("detect").removeAttribute("class");
+	document.getElementById("detectLink").setAttribute("href", "detect.html");
+}
+else
+{
+	document.getElementById("detect").setAttribute("class", "disabled");
+	document.getElementById("detectLink").removeAttribute("href");
+}
+
+if(sessvars.identifyPage == "true")
+{
+	document.getElementById("identify").removeAttribute("class");
+	document.getElementById("identifyLink").setAttribute("href", "identify.html");
+}
+else
+{
+	document.getElementById("identify").setAttribute("class", "disabled");
+	document.getElementById("identifyLink").removeAttribute("href");
+}	
+
+document.getElementById("detect").setAttribute("class", "active");
+
+}
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style_detect.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid" id="navigationbar">
+    <div class="navbar-header"> <a id="imageLink" class="navbar-brand" href="IBEIS.html"> <img src="008861-orange-grunge-sticker-icon-arrows-arrow2-upload.png" class="img-circle" width="50" height="50"></a> <a class="navbar-brand" href="IBEIS.html">Image Upload Tool</a> </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="IBEIS.html">About</a></li>
+        <li id="import"><a id="importLink">Import</a></li>
+        <li id="group"><a id="groupLink">Group</a></li>
+        <li id="detect"><a id="detectLink">Detect</a></li>
+        <li id="identify"><a id="identifyLink">Identify</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="contact.html"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="mainDiv">
+<h4 align="center"> Step 3/5 - Detecting the species of interest from all the uploaded images</h4>
+<div class="progress">
+  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+  aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+    50% Completed
+  </div>
+</div>
+
+<div>
+	Species Selector
+    <select id="mySelect" class="form-control">
+      <option value="" style="display:none">Please select Species</option>
+      <option value="elephant">Elephant</option>
+      <option value="kangaroo">Kangaroo</option>
+      <option value="lion">Lion</option>
+      <option value="panda">Panda</option>
+      <option value="zebra">Zebra</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="zebras">
+    <div id="zebra" class="zebras, img-thumbnail">
+        <img src="images/zebra1.jpg" height=150 width=150>
+    </div>
+    
+    <div id="zebra" class="zebras, img-thumbnail">
+        <img src="images/zebra2.jpg" height=150 width=150>
+    </div>
+    
+    <div id="zebra" class="zebras, img-thumbnail">
+        <img src="images/zebra3.jpg" height=150 width=150>
+    </div>
+    
+    <div id="zebra" class="zebras, img-thumbnail">
+        <img src="images/zebra4.jpg" height=150 width=150>
+    </div>
+    </div>
+    
+    <div class="lions">
+    <div id="lion1" class="lions, img-thumbnail">
+        <img src="images/lion1.jpg" border=4 height=150 width=150>
+    </div>
+    
+    <div id="lion2" class="lions, img-thumbnail">
+        <img src="images/lion2.jpg" border=4 height=150 width=150>
+    </div>
+    
+    <div id="lion3" class="lions, img-thumbnail">
+        <img src="images/lion3.jpg" border=4 height=150 width=150>
+    </div>
+    
+    <div id="lion4" class="lions, img-thumbnail">
+        <img src="images/lion4.jpg" border=4 height=150 width=150>
+    </div>
+    </div>
+    
+    <div class="kangaroos">
+    <div id="kangaroo1" class="kangaroos, img-thumbnail">
+        <img src="images/kangaroo1.jpg" border=4 height=150 width=150>
+    </div>
+    <div id="kangaroo2" class="kangaroos, img-thumbnail">
+        <img src="images/kangaroo2.jpg" border=4 height=150 width=150>
+    </div>
+    <div id="kangaroo3" class="kangaroos, img-thumbnail">
+        <img src="images/kangaroo3.jpg" border=4 height=150 width=150>
+    </div>
+    <div id="kangaroo4" class="kangaroos, img-thumbnail">
+        <img src="images/kangaroo4.jpg" border=4 height=150 width=150>
+    </div>
+    </div>
+    
+    <div class="pandas">
+    <div id="panda1" class="pandas, img-thumbnail">
+        <img src="images/panda1.jpg" border=4 height=150 width=150>
+    </div>
+    <div id="panda2" class="pandas, img-thumbnail">
+        <img src="images/panda2.jpg" border=4 height=150 width=150>
+    </div>
+    <div id="panda3" class="pandas, img-thumbnail">
+        <img src="images/panda3.jpg" border=4 height=150 width=150>
+    </div>
+    <div id="panda4" class="pandas, img-thumbnail">
+        <img src="images/panda4.jpg" border=4 height=150 width=150>
+    </div>
+    </div>
+    
+    <div class="elephants">
+    <div id="elephant1" class="elephants, img-thumbnail">
+        <img src="images/elephant1.jpg" border=4 height=150 width=150>
+    </div>
+    <div id="elephant2" class="elephants, img-thumbnail">
+        <img src="images/elephant2.jpg" border=4 height=150 width=150>
+    </div>
+    <div id="elephant3" class="elephants, img-thumbnail">
+        <img src="images/elephant3.jpg" border=4 height=150 width=150>
+    </div>
+    <div id="elephant4" class="elephants, img-thumbnail">
+        <img src="images/elephant4.jpg" border=4 height=150 width=150>
+    </div>
+    </div>
+    <script>
+    $(function(){
+    $('#mySelect').change(function(){
+        var x = $( '#mySelect option:selected').val();
+		
+		if(x == "zebra") {
+			$('.zebras').removeClass('blur');
+			$('.lions').addClass('blur');
+			$('.elephants').addClass('blur');
+			$('.pandas').addClass('blur');
+			$('.kangaroos').addClass('blur');
+			}
+		if(x == "elephant") {
+			$('.elephants').removeClass('blur');
+			$('.lions').addClass('blur');
+			$('.zebras').addClass('blur');
+			$('.pandas').addClass('blur');
+			$('.kangaroos').addClass('blur');
+			}
+		if(x == "kangaroo") {
+			$('.kangaroos').removeClass('blur');
+			$('.lions').addClass('blur');
+			$('.elephants').addClass('blur');
+			$('.pandas').addClass('blur');
+			$('.zebras').addClass('blur');
+			}
+		if(x == "lion") {
+			$('.lions').removeClass('blur');
+			$('.zebras').addClass('blur');
+			$('.elephants').addClass('blur');
+			$('.pandas').addClass('blur');
+			$('.kangaroos').addClass('blur');
+			}
+		if(x == "panda") {
+			$('.pandas').removeClass('blur');
+			$('.lions').addClass('blur');
+			$('.elephants').addClass('blur');
+			$('.zebras').addClass('blur');
+			$('.kangaroos').addClass('blur');
+			}
+		
+		
+			
+		});
+		});
+		</script>
+</div>
+<div style="clear:both">
+<ul class="pager">
+    <li class="previous"><a href="group.html" style="color:#F29F01"> <span class="glyphicon glyphicon-chevron-left"></span> Previous Step</a></li>
+    <li class="next"><a href="identify.html" style="color:#F29F01"> Next Step<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

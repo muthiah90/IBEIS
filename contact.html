@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IBEIS</title>
+  <script type="text/javascript" src="sessvars.js"></script>
+<script type="text/javascript">
+onload = function(){
+
+if(sessvars.importPage == "true")
+{
+	document.getElementById("import").removeAttribute("class");
+	document.getElementById("importLink").setAttribute("href", "importImages.php");
+}
+else
+{
+	document.getElementById("import").setAttribute("class", "disabled");
+	document.getElementById("importLink").removeAttribute("href");
+}
+
+if(sessvars.groupPage == "true")
+{
+	document.getElementById("group").removeAttribute("class");
+	document.getElementById("groupLink").setAttribute("href", "group.php");
+}
+else
+{
+	document.getElementById("group").setAttribute("class", "disabled");
+	document.getElementById("groupLink").removeAttribute("href");
+}
+
+if(sessvars.detectPage == "true")
+{
+	document.getElementById("detect").removeAttribute("class");
+	document.getElementById("detectLink").setAttribute("href", "detect.php");
+}
+else
+{
+	document.getElementById("detect").setAttribute("class", "disabled");
+	document.getElementById("detectLink").removeAttribute("href");
+}	
+}
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>    
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    	<div class="container-fluid" id="navigationbar">
+        	<div class="navbar-header">
+            	<a id="imageLink" class="navbar-brand" href="IBEIS.html"> <img src="008861-orange-grunge-sticker-icon-arrows-arrow2-upload.png" class="img-circle" width="50" height="50"></a>
+                <a class="navbar-brand" href="IBEIS.html">Image Upload Tool</a>
+            </div>
+            <div>
+            	<ul class="nav navbar-nav">
+        			<li><a href="IBEIS.html">About</a></li>
+        			<li id="import"><a id="importLink">Import</a></li>
+        			<li id="group"><a id="groupLink">Group</a></li>
+        			<li id="detect"><a id="detectLink">Detect</a></li>
+        			<li id="identify" class="disabled"><a id="identifyLink">Identify</a></li>
+      			</ul>
+				<ul class="nav navbar-nav navbar-right">
+		    		<li class="active"><a href="contact.html"><span class="glyphicon glyphicon-phone-alt"></span>  Contact Us</a></li>
+				</ul>
+            </div>     
+        </div>
+    </div>
+    
+    <div class="container-fluid" id="mainDiv">
+    	<div class="jumbotron">
+        	<h3>Prof. Tanya Berger-Wolf</h3>
+  			Department of Computer Science<br>
+  			University of Illinois at Chicago<br>
+  			Email ID: tanyabw@uic.edu <br>
+  			Phone:(312)413-8719 <br>
+        </div>
+    </div>
+</body>
+</html>

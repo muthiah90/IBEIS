@@ -1,0 +1,24 @@
+.zebras
+{
+    float: left;
+}
+.lions
+{
+    float: left;
+}
+.pandas
+{
+    float: left;
+}
+.elephants
+{
+    float: left;
+}
+.kangaroos
+{
+    float: left;
+}
+.blur
+{
+-webkit-filter: blur(3px);
+}

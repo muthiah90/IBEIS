@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Identify</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="sessvars.js"></script>
+<script type="text/javascript">
+onload = function(){
+
+sessvars.identifyPage = "true";
+
+if(sessvars.importPage == "true")
+{
+	document.getElementById("import").removeAttribute("class");
+	document.getElementById("importLink").setAttribute("href", "importImages.php");
+}
+else
+{
+	document.getElementById("import").setAttribute("class", "disabled");
+	document.getElementById("importLink").removeAttribute("href");
+}
+
+if(sessvars.groupPage == "true")
+{
+	document.getElementById("group").removeAttribute("class");
+	document.getElementById("groupLink").setAttribute("href", "group.php");
+}
+else
+{
+	document.getElementById("group").setAttribute("class", "disabled");
+	document.getElementById("groupLink").removeAttribute("href");
+}
+
+if(sessvars.detectPage == "true")
+{
+	document.getElementById("detect").removeAttribute("class");
+	document.getElementById("detectLink").setAttribute("href", "detect.php");
+}
+else
+{
+	document.getElementById("detect").setAttribute("class", "disabled");
+	document.getElementById("detectLink").removeAttribute("href");
+}	
+
+document.getElementById("identify").setAttribute("class", "active");
+
+}
+</script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" title="Home">
+  <div class="container-fluid" id="navigationbar">
+    <div class="navbar-header"> <a id="imageLink" class="navbar-brand" href="IBEIS.html"> <img src="008861-orange-grunge-sticker-icon-arrows-arrow2-upload.png" class="img-circle" width="50" height="50"></a> <a class="navbar-brand" href="IBEIS.html">Image Upload Tool</a> </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="IBEIS.html">About</a></li>
+        <li id="import"><a id="importLink">Import</a></li>
+        <li id="group"><a id="groupLink">Group</a></li>
+        <li id="detect"><a id="detectLink">Detect</a></li>
+        <li id="identify"><a id="identifyLink">Identify</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="contact.html"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="mainDiv">
+<h4 align="center"> Step 4/5 - Identifying the species detected from the uploaded sightings</h4>
+<div class="progress">
+  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+  aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    70% Completed
+  </div>
+</div>
+
+<table class="table table-hover table-striped table-bordered">
+  
+	<TH>ID</TH>
+	<TH>Image</TH>
+	<TH>Source Image Name</TH>
+	<TH>Name in IBEIS Database</TH>
+	<TH>Species</TH>
+
+	<tr>
+    		<td>21</td>
+		<td align="center"> <img src="boxedimages/elephant1.jpg" align="center" height=200 width=250 class="img img-thumbnail"></td> 
+	      	<td>DSC_01.JPG</td>
+           	<td>IBEIS_213</td>
+		<td>Elephant</td>
+  	</tr>
+  	<tr>
+          	<td>25</td>
+	    	<td align="center"> <img src="boxedimages/elephant2.jpg" align="center" border=4 height=200 width=250 class="img img-thumbnail"></td> 
+	    	<td>DSC_11.JPG</td>
+	    	<td><input type="text" name="random" onfocus="this.value=''" value="Name the species" class="form-control"></td>
+		<td>Elephant</td>
+  	</tr>
+	<tr>
+    		<td>102</td>
+    		<td align="center"> <img src="boxedimages/elephant3.jpg" align="center" border=4 height=200 width=250 class="img img-thumbnail"></td> 
+    		<td>DSC_15.JPG</td>
+	     	<td>IBEIS_345</td>
+		<td>Elephant</td>
+  	</tr>
+	<tr>
+    		<td>103</td>
+    		<td align="center"> <img src="boxedimages/elephant4.jpg" align="center" border=4 height=200 width=250 class="img img-thumbnail"></td> 
+    		<td>DSC_17.JPG</td>
+	     	<td><input type="text" name="random" onfocus="this.value=''" value="Name the species" class="form-control"></td>
+		<td>Elephant</td>
+  	</tr>
+	
+</table>
+
+<div align="center">
+	<a href="save.html" class="btn btn-success btn-lg"> Save to Database <span class="glyphicon glyphicon-cloud-upload"></span></a>
+</div>
+
+<ul class="pager">
+    <li class="previous"><a href="detect.php" style="color:#F29F01"> <span class="glyphicon glyphicon-chevron-left"></span> Previous Step</a></li>
+</ul>
+</body>
+</html>
